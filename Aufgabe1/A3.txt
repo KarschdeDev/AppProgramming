@@ -1,0 +1,2 @@
+Begründung:
+Bild wurde groß mittig dargestellt, um sofort zu erkennen um was es sich hierbei handelt. Linear Layout wurde verwendet, da hierdurch eine gute Einteilung zwischen Horizontal und Vertikal angeordneten Elementen aufgezeigt werden kann. Die Elemente befinden sich alle linksbündig untereinander und stellen somit eine Liste mit allen wichtigen Informationen da. Im Querformat wird das Layout der Breite angepasst, das Bild mittig vergrößert und die Texte wieder linksbündig untereinander verteilt.
