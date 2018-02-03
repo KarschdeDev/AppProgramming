@@ -1,21 +1,22 @@
 package hska.michaelbosch.com.bonus;
 
+import com.activeandroid.content.ContentProvider;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
 
-import java.text.ParseException;
-import java.util.ArrayList;
+import com.activeandroid.ActiveAndroid;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import hska.michaelbosch.com.bonus.pojo.OfferCategory;
-import hska.michaelbosch.com.bonus.pojo.Offer;
 import hska.michaelbosch.com.bonus.pojo.OffersForTime;
-import com.activeandroid.ActiveAndroid;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -58,6 +59,35 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new RecyclerViewContainerAdapter(offersForTimes, this);
         recyclerView.setAdapter(adapter);
+
+
+
+        /*
+
+        Nutzung eines Content Provicders:
+        getSupportLoaderManager().initLoader(0, null, new LoaderManager.LoaderCallbacks<Cursor>() {
+            @Override
+            public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+                return new CursorLoader(getParent(),
+                        ContentProvider.createUri(OffersForTime.class, null),
+                        null, null, null, null
+                );
+            }
+
+            @Override
+            public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+                data.get
+
+            }
+
+            @Override
+            public void onLoaderReset(Loader<Cursor> loader) {
+
+            }
+        });
+
+
+        */
 
     }
 

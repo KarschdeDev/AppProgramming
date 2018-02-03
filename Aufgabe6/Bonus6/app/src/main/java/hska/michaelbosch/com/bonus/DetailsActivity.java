@@ -6,6 +6,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.lang.reflect.Modifier;
 
 import hska.michaelbosch.com.bonus.pojo.Offer;
 
@@ -20,7 +23,7 @@ public class DetailsActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         Offer offer = null;
         if (extras != null) {
-            offer= new Gson().fromJson(extras.getString("data"), Offer.class);
+            offer= new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create().fromJson(extras.getString("data"), Offer.class);
         }
 
 
