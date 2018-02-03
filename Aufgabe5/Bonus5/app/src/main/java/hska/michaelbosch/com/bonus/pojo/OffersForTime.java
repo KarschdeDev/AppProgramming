@@ -9,6 +9,7 @@ import java.util.List;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.google.gson.annotations.Expose;
 
 /**
  * Created by Michael on 18.01.2018.
@@ -19,6 +20,7 @@ public class OffersForTime extends Model{
 
     private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
+    @Expose
     @Column(name="date")
     private Date date;
 
